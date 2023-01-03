@@ -1,3 +1,9 @@
+/*
+** EPITECH PROJECT, 2022
+** task05
+** File description:
+** return a number out of a str
+*/
 #include "my.h"
 
 static int is_number(char c)
