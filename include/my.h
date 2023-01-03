@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2022
-** my_lib header
-** File description:
-** all prototypes
-*/
-
 #ifndef MY_LIB_
     #define MY_LIB_
 

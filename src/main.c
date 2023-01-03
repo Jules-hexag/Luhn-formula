@@ -1,6 +1,7 @@
 #include "my.h"
+#include "luhn_formula.h"
 
-int main(void)
+int main(int const argc, char const * const *argv)
 {
-    return 0;
+    return luhn(argc, argv);
 }

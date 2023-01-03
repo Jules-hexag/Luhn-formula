@@ -1,4 +1,5 @@
 SRC 	=	src/main.c \
+			src/luhn.c
 
 OBJ		= 	$(SRC:.c=.o)
 
