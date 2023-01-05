@@ -2,6 +2,8 @@ SRC	=	my_getnbr.c \
 		my_str_to_word_array.c \
 		my_str_isnum.c \
 		my_strlen.c \
+		my_strncpy.c \
+		my_strncmp.c \
 		my_printf/my_printf_char.c \
 		my_printf/my_printf_dbl_sequel.c \
 		my_printf/my_printf_dbl.c \

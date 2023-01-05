@@ -25,14 +25,29 @@ static int digits_number(int number)
     return sum;
 }
 
+static int number_validity(int sum)
+{
+    if (sum % 10 == 0) {
+        write(1, "The number is valid.\n", 22);
+        return 0;
+    } else {
+        write(1, "The number is not valid.\n", 26);
+        return 0;
+    }
+}
+
 int luhn(int const argc, char const * const *argv)
 {
     int sum = 0;
     int number = 0;
     int arg_len = 0;
     if (verify_input(argc, argv)) {
-        write(2, "Invalid input.\n", 16);
         return -1;
+    }
+    if (!my_strncmp(argv[1], "-h", 2)) {
+        write(1, "USAGE\n\tthe number must be divided in groups of even numbers of digits\n\
+        \tgroups of digits cannot be only 0's\n", 0);
+        return 0;
     }
     for (int i = argc; i > 1; i--) {
         number = my_getnbr(argv[i - 1]);
@@ -50,6 +65,7 @@ int luhn(int const argc, char const * const *argv)
             }
         }
     }
-    my_printf("Luhn sum : %d\n", sum);
+    my_printf("%d\n", sum);
+    number_validity(sum);
     return 0;
 }
